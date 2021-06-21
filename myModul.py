@@ -9,7 +9,7 @@ def menu(pilihan):
 	print("6. Invers matrix")
 
 	while(pilihan > 6):
-	    pilihan = int(input("menu yang dipilih (0-6) : "))
+	    pilihan = int(input("choose your menu (0-6) : "))
 	return pilihan
 
 def summation():
@@ -45,6 +45,7 @@ def multiplication():
 	matrixA = inputMatrix(size)
 	sizeB = inputSize()
 	while size[1] != sizeB[0] :
+		print(f"row must be equal with col of matrix before :  {size[1]}")
 		sizeB = inputSize()
 
 	matrixB = inputMatrix(sizeB)    
@@ -56,7 +57,7 @@ def multiplication():
 			result = 0
 			for k in range(len(matrixA[0])):
 				result += (matrixA[i][k] * matrixB[k][j])
-				list.append(result) 
+			list.append(result) 
 		results.append(list)
 	return results
 
